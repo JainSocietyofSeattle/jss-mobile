@@ -17,7 +17,7 @@ export default class AgendaScreen extends Component {
       <Agenda
         items={this.state.items}
         loadItemsForMonth={this.loadItems.bind(this)}
-        selected={'2017-05-16'}
+        selected={'2020-02-23'}
         renderItem={this.renderItem.bind(this)}
         renderEmptyDate={this.renderEmptyDate.bind(this)}
         rowHasChanged={this.rowHasChanged.bind(this)}
@@ -65,8 +65,8 @@ export default class AgendaScreen extends Component {
 
   renderItem(item) {
     return (
-      <TouchableOpacity 
-        style={[styles.item, {height: item.height}]} 
+      <TouchableOpacity
+        style={[styles.item, {height: item.height}]}
         onPress={() => Alert.alert(item.name)}
       >
         <Text>{item.name}</Text>

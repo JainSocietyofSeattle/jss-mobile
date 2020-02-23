@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, View, TouchableOpacity, Text, Image} from 'react-native';
+import {Platform, StyleSheet, View, TouchableOpacity, Text, Image, Linking} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 
@@ -27,7 +27,7 @@ export default class MenuScreen extends Component {
         <TouchableOpacity style={styles.menu} onPress={this.onAgendaPress.bind(this)}>
           <Text style={styles.menuText}>Today Events</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={this.onDonate.bind(this)}>
+        <TouchableOpacity style={styles.menu} onPress={()=>{ Linking.openURL('https://jainsocietyofseattle.org/donations/')} }>
           <Text style={styles.menuText}>Donate</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={this.onContactUS.bind(this)}>
